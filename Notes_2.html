@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<!-- خط الرقعة الملكي الأصيل الفاخر -->
+<link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        min-height: 100vh;
+        /* خلفية الفراغ الملكي السيادي الأعمق والأكثر فخامة في التاريخ */
+        background: radial-gradient(circle at center, #362603 0%, #110c01 45%, #000000 100%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-family: 'Amiri', serif;
+        color: #fff;
+        overflow: hidden;
+    }
+
+    /* إطار الهيمنة الأسطوري (نبض ناري-ألماسي فائق السطوع) */
+    @keyframes sovereignPulse {
+        0% { border-color: #ffd700; box-shadow: 0 0 45px rgba(255,215,0,0.9), inset 0 0 30px rgba(255,215,0,0.6); }
+        50% { border-color: #ffffff; box-shadow: 0 0 100px rgba(255,255,255,1), inset 0 0 55px rgba(255,255,255,0.95); }
+        100% { border-color: #ffd700; box-shadow: 0 0 45px rgba(255,215,0,0.9), inset 0 0 30px rgba(255,215,0,0.6); }
+    }
+    .sovereign-frame { animation: sovereignPulse 2s infinite alternate; border: 6px solid #ffd700; border-radius: 50%; }
+
+    /* الاسم المحفور بسبائك الذهب الخالص والبرق الناصع */
+    .sovereign-gold-text {
+        background: linear-gradient(180deg, #ffffff 0%, #fff066 25%, #ffcc00 60%, #997300 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-shadow: 0 10px 40px rgba(255, 215, 0, 0.7);
+    }
+
+    /* زر السيادة والسيطرة الفاخر جداً */
+    .sovereign-btn {
+        background: linear-gradient(135deg, #1f1501 0%, #000000 100%);
+        border: 2px solid #ffd700;
+        color: #ffd700;
+        padding: 18px 75px;
+        text-decoration: none;
+        font-size: 23px;
+        font-weight: bold;
+        border-radius: 16px;
+        box-shadow: 0 15px 50px rgba(255, 215, 0, 0.45);
+        transition: all 0.3s ease;
+        letter-spacing: 2px;
+    }
+    .sovereign-btn:hover {
+        background: #ffd700;
+        color: #000;
+        box-shadow: 0 0 70px #ffd700;
+    }
+</style>
+</head>
+<body>
+
+    <!-- الصورة الشخصية السيادية -->
+    <div class="sovereign-frame" style="width: 240px; height: 240px; overflow: hidden; background: #000; display: flex; align-items: center; justify-content: center; position: relative;">
+        <input type="file" id="imgInput" accept="image/*" style="display: none;" onchange="previewImage(this)">
+        <label for="imgInput" style="cursor: pointer; width: 100%; height: 100%;">
+            <img id="preview" src="#" alt="صورتك" style="width: 100%; height: 100%; object-fit: cover; display: none;">
+            <span id="label" style="font-size: 20px; color: #ffd700; line-height: 240px; text-shadow: 0 2px 12px rgba(0,0,0,0.9);">رفع الصورة</span>
+        </label>
+    </div>
+    
+    <script>
+        function previewImage(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+                reader.onload = function(e) {
+                    document.getElementById('preview').src = e.target.result;
+                    document.getElementById('preview').style.display = 'block';
+                    document.getElementById('label').style.display = 'none';
+                }
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+    </script>
+    
+    <!-- الاسم الملكي السيادي -->
+    <h1 class="sovereign-gold-text" style="margin: 35px 0 5px 0; font-size: 58px; letter-spacing: 2px;">إبراهيم Y. O</h1>
+    <p style="color: #fae17d; margin-bottom: 45px; font-size: 26px; letter-spacing: 4px; text-shadow: 0 3px 18px rgba(0,0,0,0.9);">@c_t_e9</p>
+
+    <!-- زر التواصل المباشر السيادي -->
+    <a href="https://t.me/c_t_e9" target="_blank" class="sovereign-btn">
+        تواصل معي فوراً ✦
+    </a>
+
+</body>
+</html>
